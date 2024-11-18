@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The AI Code Editor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/platy-studio-logo.png" alt="Platy.Studio" />
+      </div>
+      <div class="nav-link-container">
+        <div class="nav-link">Features</div>
+        <div class="nav-link">Careers</div>
+        <div class="nav-link">Blogs</div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <h1>
+        The AI Video <br />
+        Production Studio
+      </h1>
+      <p class="sub-title">
+        Box office quality dubbing which retains the original context, meaning,
+        speaker's voice and <br />
+        expression style, optimized for entertainment content like Hollywood
+        movies.
+      </p>
+      <div class="cta-buttons">
+        <button class="download-btn">Download App</button>
+        <button class="join-btn">Join Beta</button>
+      </div>
+    </header>
+
+    <main>
+      <h3 class="demo-video-section">Demo videos</h3>
+      <section class="demo-videos" id="demo-videos">
+        <div class="video-container">
+          <!-- Video Element -->
+          <video id="video" src="/assets/videos/video.mp4" muted></video>
+
+          <!-- Audio Tracks -->
+          <audio
+            id="englishAudio"
+            src="/assets/videos/english_audio.mp3"
+          ></audio>
+          <audio
+            id="spanishAudio"
+            src="/assets/videos/spanish_audio.wav"
+          ></audio>
+
+          <!-- Language Toggle Buttons -->
+          <div class="switch-language-button-container">
+            <button
+              class="flag-img-container"
+              id="englishButton"
+              onclick="switchLanguage('english')"
+            >
+              <img
+                width="100%"
+                src="assets/img/us-flag.png"
+                alt="us-flag-icon"
+              />
+            </button>
+            <!-- greater than sign -->
+            <svg
+              class="greater-than-sign"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                stroke="currentColor"
+                stroke-width="1.5"
+                d="m6 12 4-4-4-4"
+              ></path>
+            </svg>
+            <button
+              class="flag-img-container"
+              id="spanishButton"
+              onclick="switchLanguage('spanish')"
+            >
+              <img
+                width="100%"
+                src="assets/img/spanish-flag.png"
+                alt="ind-flag-icon"
+              />
+            </button>
+            <button class="play-pause-button" onclick="playPauseDemoVideo()">
+              <div id="play-sign">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M17 10 5.75 16.928V3.072z"
+                  ></path>
+                </svg>
+              </div>
+              <div id="pause-sign">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M4 3h4v14H4zM12 3h4v14h-4z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <p>Create lines with your keyboard as you craft your next app</p>
+          <div class="feature-image"></div>
+        </div>
+
+        <div class="feature-card">
+          <h3>Apply Instantly</h3>
+          <p>Get suggestions that work instantly to table to style an array</p>
+          <div class="feature-image"></div>
+        </div>
+
+        <div class="feature-card">
+          <h3>Codebase knowledge</h3>
+          <p>Update code with new snippets easily and efficiently</p>
+          <div class="feature-image"></div>
+        </div>
+      </section>
+
+      <section class="benefits">
+        <h2>Build software faster</h2>
+        <div class="benefit-cards">
+          <div class="benefit-card">
+            <div class="icon frontier"></div>
+            <h4>Frontier Intelligence</h4>
+            <p>Access to cutting-edge AI models</p>
+          </div>
+          <div class="benefit-card">
+            <div class="icon private"></div>
+            <h4>Private and Secure</h4>
+            <p>Your code stays on your machine</p>
+          </div>
+          <div class="benefit-card">
+            <div class="icon familiar"></div>
+            <h4>Feels Familiar</h4>
+            <p>Works with your existing workflow</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Loved by developers</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

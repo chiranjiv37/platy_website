@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --gradient-primary: linear-gradient(45deg, #ff00ff, #00ffff);
+  --dark-bg: #0a0a0a;
+  --card-bg: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--dark-bg);
+  color: white;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.logo {
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: transparent;
+  height: 60px;
+}
+
+.nav-link-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+}
+.nav-link {
+  font-weight: 600;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(45deg, #080808, #121212);
+  background-size: 100% 100%;
+  background-position: 0 0;
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+.hero:before,
+.hero:after {
+  animation: none !important;
+  -webkit-animation: none !important;
+  background-size: 100% 100%;
+  background-position: 0 0;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  color: white;
+}
+.sub-title {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.cta-buttons button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.partners {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0;
+  filter: grayscale(1);
+  opacity: 0.7;
+}
+
+.demo-video-section {
+  width: fit-content;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.demo-videos {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.video-container {
+  position: relative;
+  width: 20%;
+  margin: auto;
+  overflow: hidden;
+  background: var(--card-bg);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+#video {
+  width: 100%;
+  margin: auto;
+}
+.switch-language-button-container {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 10px;
+  width: fit-content;
+  align-items: center;
+  margin: auto;
+  gap: 6px;
+  border-radius: 9999px;
+  background-color: rgb(255, 255, 255);
+  padding: 6px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.05) 0px 0px 20px 0px;
+  line-height: 23.8px;
+  font-family: __Waldenburg_379714, __Waldenburg_Fallback_379714;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.flag-img-container,
+.play-pause-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 9999px;
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+  color: rgb(118, 118, 118);
+  font-family: __WaldenburgHF_9a7024, __WaldenburgHF_Fallback_9a7024;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  line-height: 15.4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.play-pause-button {
+  color: rgb(255, 255, 255);
+  background-color: #080808;
+}
+.active-flag {
+  background-color: #080808;
+}
+.greater-than-sign {
+  color: #080808;
+}
+
+.feature-image {
+  margin-top: 1rem;
+  height: 200px;
+  background: var(--gradient-primary);
+  border-radius: 8px;
+  opacity: 0.8;
+}
+#pause-sign {
+  display: none;
+}
+#play-sign {
+  display: block;
+}
+
+.benefits {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.benefit-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.benefit-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  background: var(--gradient-primary);
+  border-radius: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  background: var(--card-bg);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .video-container {
+    width: 32%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .video-container {
+    width: 50%;
+  }
+}
