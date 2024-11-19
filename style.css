@@ -35,6 +35,8 @@ body {
   cursor: pointer;
 }
 .nav-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit;
   font-weight: 600;
 }
 
@@ -82,7 +84,10 @@ body {
   cursor: pointer;
   font-weight: bold;
 }
-
+.cta-buttons button a {
+  text-decoration: none; /* Remove underline */
+  color: inherit;
+}
 .partners {
   display: flex;
   justify-content: center;
@@ -233,6 +238,193 @@ footer {
   object-fit: contain;
   margin: 0;
   padding: 0;
+}
+
+/* contact page style */
+.contact-page-container {
+  margin-right: 150px;
+  font-family: Inter;
+  margin-left: 150px;
+}
+.contact-content-container {
+  width: 75vw;
+  margin: 70px auto;
+}
+.contact-headline,
+.career-headline {
+  font-size: 52px;
+  font-weight: bold;
+  width: 518px;
+  margin: auto;
+  text-align: center;
+}
+.contact-para,
+.career-para {
+  font-size: 14px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 367px;
+  text-align: center;
+  color: #c2b9db;
+}
+.contact-main-section {
+  height: 555px;
+  display: flex;
+  filter: drop-shadow(0px 8px 67.8px rgba(0, 0, 0, 0.12));
+}
+.contact-leftSideContainer {
+  overflow: hidden;
+  position: relative;
+  width: 50%;
+  background: linear-gradient(
+      150.1deg,
+      rgba(0, 0, 0, 0) 27.92%,
+      rgba(0, 0, 0, 0.5) 98.44%
+    ),
+    rgba(25, 43, 194, 0.8);
+  color: white;
+  border-radius: 12px 0 0 12px;
+  padding-left: 40px;
+  padding-bottom: 50px;
+}
+.leftside-headline {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 50px 0 30px 0;
+}
+.leftside-phone {
+  margin-top: 80px;
+  height: 44px;
+  align-content: center;
+}
+.icons {
+  padding-right: 15px;
+}
+.halfCircle {
+  position: absolute;
+  bottom: -80px;
+  right: -50px;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #ffffff33;
+}
+.circle {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+  height: 118px;
+  width: 118px;
+  border-radius: 50%;
+  background-color: #ffffff0d;
+}
+
+.contact-rightFormContainer {
+  width: 40%;
+  background-color: #fafafa;
+  padding: 50px 60px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  border-radius: 0 12px 12px 0;
+}
+.contact-inputFieldContainer {
+  display: flex;
+  gap: 10px;
+  border: 1px solid black;
+  padding: 10px 5px 10px 10px;
+  border-radius: 12px;
+  flex-grow: 1;
+}
+.contact-inputField {
+  border: none;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  background-color: #fafafa;
+}
+.form-textArea {
+  border: none;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  background-color: #fafafa;
+  resize: none;
+  height: 130px;
+}
+.touch-button {
+  cursor: pointer;
+  background-color: #192bc2;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+  height: 50px;
+  align-content: center;
+}
+
+@media only screen and (max-width: 1120px) {
+  .contact-page-container {
+    margin: 2rem;
+  }
+  .contact-content-container {
+    width: auto;
+  }
+  .contact-headline,
+  .career-headline {
+    width: auto;
+    font-size: 32px;
+  }
+  .contact-para,
+  .career-para {
+    width: auto;
+    font-size: 14px;
+  }
+  .contact-main-section {
+    flex-direction: column-reverse;
+    height: auto;
+    filter: none;
+  }
+  .contact-rightFormContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: auto;
+    background-color: white;
+    padding: 40px;
+  }
+  .contact-inputFieldContainer {
+    padding: 12px 5px 12px 10px;
+    flex-grow: 1;
+  }
+  .contact-leftSideContainer {
+    width: auto;
+    margin-top: 30px;
+    overflow: hidden;
+    height: 530px;
+    border-radius: 12px;
+  }
+  .leftside-headline {
+    font-size: 22px;
+    font-weight: 500;
+    padding-right: 20px;
+  }
+  .leftside-phone {
+    margin-top: 60px;
+  }
+  .form-textArea,
+  .contact-inputField {
+    background-color: white;
+  }
+  .ReactModal__Content {
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+    max-height: 90%;
+  }
 }
 
 @media screen and (max-width: 900px) {

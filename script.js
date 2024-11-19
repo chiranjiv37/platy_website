@@ -191,7 +191,6 @@ document.addEventListener("DOMContentLoaded", () => {
       )
     );
     originalAudioPlayButton.addEventListener("click", () => {
-      currentAudio = originalAudio;
       switchLanguage(
         "original",
         video,
@@ -205,7 +204,6 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
     dubAudioPlayButton.addEventListener("click", () => {
-      currentAudio = dubAudio;
       switchLanguage(
         "dub",
         video,
@@ -321,5 +319,51 @@ function switchLanguage(
     dubAudio
   );
 }
+
+// submit button in contact page
+document
+  .querySelector(".touch-button")
+  .addEventListener("click", async function () {
+    const name = document
+      .querySelector('.contact-inputField[placeholder="Your Name"]')
+      .value.trim();
+    const email = document
+      .querySelector('.contact-inputField[placeholder="Your Email"]')
+      .value.trim();
+    const message = document.querySelector(".form-textArea").value.trim();
+    const timestamp = new Date().toLocaleString();
+
+    if (!name || !email || !message) {
+      alert("Please fill out all fields before submitting!");
+      return;
+    }
+
+    const data = { timestamp, name, email, message };
+
+    try {
+      const response = await fetch("/save-contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        alert("Details saved successfully!");
+        // Reset the form
+        document.querySelector(
+          '.contact-inputField[placeholder="Your Name"]'
+        ).value = "";
+        document.querySelector(
+          '.contact-inputField[placeholder="Your Email"]'
+        ).value = "";
+        document.querySelector(".form-textArea").value = "";
+      } else {
+        alert("Failed to save details.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred.");
+    }
+  });
 
 updateGradient();
