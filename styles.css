@@ -244,4 +244,16 @@ footer {
   .video-container {
     width: 50%;
   }
+  .logo {
+    font-size: 40px;
+  }
+  .nav-link {
+    font-weight: 500;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .sub-title {
+    font-size: 12px;
+  }
 }
