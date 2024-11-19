@@ -146,6 +146,7 @@ body {
 .play-pause-button {
   height: 40px;
   width: 40px;
+  border: 0px;
   border-radius: 9999px;
   background-color: rgb(255, 255, 255);
   opacity: 1;
@@ -179,9 +180,11 @@ body {
 }
 #pause-sign {
   display: none;
+  padding-top: 3px;
 }
 #play-sign {
   display: block;
+  padding-top: 3px;
 }
 
 .benefits {
