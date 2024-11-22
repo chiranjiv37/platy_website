@@ -44,7 +44,7 @@ const videos = [
   {
     id: "video1",
     videoSrc: "assets/videos/video.mp4", // Update with your actual video path
-    // thumbnail: "assets/img/path.jpg",
+    thumbnail: "assets/img/path.jpg",
     audioTracks: {
       original: "assets/audios/english_audio.mp3", // Update with your actual audio path
       dub: "assets/audios/spanish_audio.wav", // Update with your actual audio path
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Set inner HTML for the video container
     videoContainer.innerHTML = `
           <!-- Video Element -->
-          <video id="video-${videoData.id}" class="demo-video" muted playsinline preload="auto">
+          <video id="video-${videoData.id}" class="demo-video" muted playsinline preload="auto" poster="${videoData.thumbnail}">
             <source src="${videoData.videoSrc}" type="video/mp4" >
             Your browser does not support the video tag.
           </video>
