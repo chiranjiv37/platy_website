@@ -44,6 +44,7 @@ const videos = [
   {
     id: "video1",
     videoSrc: "assets/videos/video.mp4", // Update with your actual video path
+    // thumbnail: "assets/img/path.jpg",
     audioTracks: {
       original: "assets/audios/english_audio.mp3", // Update with your actual audio path
       dub: "assets/audios/spanish_audio.wav", // Update with your actual audio path
@@ -178,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     video.addEventListener("loadeddata", function () {
       // Ensure video is loaded before showing it
-      videoElement.currentTime = 0;
+      video.currentTime = 0;
     });
 
     // let currentAudio = originalAudio;
