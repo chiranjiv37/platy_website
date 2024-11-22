@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Set inner HTML for the video container
     videoContainer.innerHTML = `
           <!-- Video Element -->
-          <video id="video-${videoData.id}" class="demo-video" muted playsinline>
+          <video id="video-${videoData.id}" class="demo-video" muted playsinline preload="auto">
             <source src="${videoData.videoSrc}" type="video/mp4" >
             Your browser does not support the video tag.
           </video>
