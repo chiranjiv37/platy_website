@@ -43,7 +43,7 @@ updateGradient();
 const videos = [
   {
     id: "video1",
-    videoSrc: "assets/videos/video.webm", // Update with your actual video path
+    videoSrc: "assets/videos/video.mp4", // Update with your actual video path
     audioTracks: {
       original: "assets/audios/english_audio.mp3", // Update with your actual audio path
       dub: "assets/audios/spanish_audio.wav", // Update with your actual audio path
@@ -69,7 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Set inner HTML for the video container
     videoContainer.innerHTML = `
           <!-- Video Element -->
-          <video id="video-${videoData.id}" class="demo-video" src="${videoData.videoSrc}" type="video/webm" muted>
+          <video id="video-${videoData.id}" class="demo-video" muted>
+            <source src="${videoData.videoSrc}" type="video/mp4">
+            Your browser does not support the video tag.
           </video>
 
           <!-- Audio Tracks -->
