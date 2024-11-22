@@ -176,6 +176,11 @@ document.addEventListener("DOMContentLoaded", () => {
       `play-pause-button-${videoData.id}`
     );
 
+    video.addEventListener("loadeddata", function () {
+      // Ensure video is loaded before showing it
+      videoElement.currentTime = 0;
+    });
+
     // let currentAudio = originalAudio;
     const currentAudioRef = { audio: originalAudio };
 
