@@ -159,14 +159,7 @@ body {
   background-color: rgb(255, 255, 255);
   opacity: 1;
   color: rgb(118, 118, 118);
-  font-family: __WaldenburgHF_9a7024, __WaldenburgHF_Fallback_9a7024;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.7px;
-  line-height: 15.4px;
-  text-transform: uppercase;
   cursor: pointer;
-  white-space: nowrap;
 }
 .play-pause-button {
   color: rgb(255, 255, 255);
