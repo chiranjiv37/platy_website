@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Set inner HTML for the video container
     videoContainer.innerHTML = `
           <!-- Video Element -->
-          <video id="video-${videoData.id}" class="demo-video" src="${videoData.videoSrc}" muted></video>
+          <video id="video-${videoData.id}" class="demo-video" src="${videoData.videoSrc}" type="video/mp4" muted></video>
 
           <!-- Audio Tracks -->
           <audio
