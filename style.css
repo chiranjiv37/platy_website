@@ -97,19 +97,26 @@ body {
   opacity: 0.7;
 }
 
-.demo-video-section {
-  width: fit-content;
-  margin: auto;
-  margin-top: 50px;
+.heading {
+  text-align: center;
+  font-size: 2.125rem;
+  line-height: 2.25rem;
 }
-
-.demo-videos {
+.sub-heading {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.section {
   padding: 4rem 2rem;
+}
+/* .demo-videos {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-}
+} */
 
 .video-container {
   position: relative;
@@ -186,31 +193,51 @@ body {
   display: block;
 }
 
-.benefits {
-  padding: 4rem 2rem;
+.offerings {
   text-align: center;
 }
 
-.benefit-cards {
+.offering-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
 
-.benefit-card {
+.offering-card {
   background: var(--card-bg);
   padding: 2rem;
   border-radius: 12px;
   backdrop-filter: blur(10px);
+}
+.card-heading {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+.card-para {
+  font-size: 12px;
+  opacity: 0.5;
 }
 
 .icon {
   width: 60px;
   height: 60px;
   margin: 0 auto 1rem;
-  background: var(--gradient-primary);
+  /* background: var(--gradient-primary); */
   border-radius: 12px;
+}
+
+.language {
+  background-image: url("assets/img/language.png");
+  background-size: cover;
+}
+.libsync {
+  background-image: url("assets/img/libsync2.png");
+  background-size: cover;
+}
+.quick-turn-around {
+  background-image: url("assets/img/quick-turn-around.png");
+  background-size: cover;
 }
 
 footer {
