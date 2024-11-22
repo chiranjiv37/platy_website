@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Set inner HTML for the video container
     videoContainer.innerHTML = `
           <!-- Video Element -->
-          <video id="video-${videoData.id}" class="demo-video" muted playsinline preload="auto" poster="${videoData.thumbnail}">
+          <video id="video-${videoData.id}" class="demo-video" muted playsinline preload="metadata" poster="${videoData.thumbnail}">
             <source src="${videoData.videoSrc}" type="video/mp4" >
             Your browser does not support the video tag.
           </video>
@@ -177,12 +177,6 @@ document.addEventListener("DOMContentLoaded", () => {
       `play-pause-button-${videoData.id}`
     );
 
-    if (!videoData.thumbnail) {
-      video.addEventListener("loadeddata", function () {
-        // Ensure video is loaded before showing it
-        video.currentTime = 0;
-      });
-    }
     // let currentAudio = originalAudio;
     const currentAudioRef = { audio: originalAudio };
 
